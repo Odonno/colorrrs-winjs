@@ -117,7 +117,42 @@ window.rgbHex = function() {
             n = parseInt(i[3] + i[3], 16)
         }
         r = (e * 299 + t * 587 + n * 114) / 1e3;
-        r < 125 ? this.removeClass("light").addClass("dark") : this.removeClass("dark").addClass("light")
+        r < 125 ? this.removeClass("light").addClass("dark") : this.removeClass("dark").addClass("light");
+        
+        // update title bar color (W10 app)
+        if (typeof Windows !== 'undefined') {
+            var titleBar = Windows.UI.ViewManagement.ApplicationView.getForCurrentView().titleBar;
+            var backgroundColor;
+            var foregroundColor;
+            
+            // dark theme
+            if (r < 125) {
+                // create color
+                backgroundColor = { a: 255, r: e, g: t, b: n };
+                foregroundColor = { a: 255, r: 255, g: 255, b: 255 };
+                
+                // title bar
+                titleBar.backgroundColor = backgroundColor;
+                titleBar.foregroundColor = foregroundColor;
+                
+                // title bar buttons
+                titleBar.buttonBackgroundColor = backgroundColor;
+                titleBar.buttonForegroundColor  = foregroundColor;
+            } 
+            // light theme
+            else {
+                backgroundColor = { a: 255, r: e, g: t, b: n };
+                foregroundColor = { a: 255, r: 0, g: 0, b: 0 };
+                
+                // title bar
+                titleBar.backgroundColor = backgroundColor;
+                titleBar.foregroundColor = foregroundColor;
+                
+                // title bar buttons
+                titleBar.buttonBackgroundColor = backgroundColor;
+                titleBar.buttonForegroundColor  = foregroundColor;
+            }
+        }
     }
 })(jQuery);
 $(window).load(function() {
