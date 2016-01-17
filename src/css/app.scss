@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box
+}
+body,
+html {
+    height: 100%
+}
+body,
+input {
+    font: 300 18px/1.2 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+    background: #ffd454
+}
+a {
+    text-decoration: none;
+    color: #222
+}
+a:hover {
+    color: #111
+}
+a:focus {
+    outline: 0
+}
+input {
+    display: block;
+    width: 335px;
+    font-size: 34px;
+    line-height: 44px;
+    background: 0 0;
+    border: none;
+    border-bottom: 1px dotted rgba(0, 0, 0, .4);
+    padding: 5px 0;
+    border-radius: 0
+}
+input:focus {
+    border-bottom-color: #000;
+    outline: 0
+}
+.c {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px
+}
+#wrap {
+    width: 340px;
+    height: 125px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -62.5px -170px
+}
+#hex {
+    margin-bottom: 15px
+}
+.tweet {
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    max-width: 100%;
+    height: 31px;
+    font: 700 13px/29px "Helvetica Neue", Helvetica, sans-serif;
+    color: #222;
+    background-color: transparent;
+    border: 1px solid #222;
+    padding: 0 8px;
+    border-radius: 3px
+}
+.tweet:active,
+.tweet:focus,
+.tweet:hover {
+    background-color: rgba(0, 0, 0, .05)
+}
+.tweet svg {
+    position: relative;
+    top: 2px;
+    margin-right: 1px;
+    fill: #222
+}
+.logo {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    width: 450px;
+    height: 46px;
+    margin-left: -225px
+}
+.oh a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 80px;
+    text-align: center;
+    z-index: 1
+}
+.oh a span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top: -40px
+}
+.light {
+    color: #222!important
+}
+.light input {
+    color: #222!important;
+    border-bottom-color: rgba(0, 0, 0, .4)
+}
+.light input:focus {
+    border-bottom-color: #000
+}
+.dark .c {
+    color: #fff
+}
+.dark .c:hover {
+    color: #ccc
+}
+.dark input {
+    color: #fff!important;
+    border-bottom-color: rgba(255, 255, 255, .4)
+}
+.dark input:focus {
+    border-bottom-color: #fff
+}
+.dark span {
+    color: #fff
+}
+.dark .tweet {
+    color: #fff;
+    border-color: #fff
+}
+.dark .tweet:hover {
+    background-color: rgba(255, 255, 255, .15)
+}
+.dark svg {
+    fill: #fff
+}
+.dark::-webkit-input-placeholder {
+    color: #fff!important
+}
+.dark:-moz-placeholder {
+    color: #fff!important
+}
+.dark::-moz-placeholder {
+    color: #fff!important
+}
+.dark:-ms-input-placeholder {
+    color: #fff!important
+}
+::-webkit-input-placeholder {
+    color: #222
+}
+:-moz-placeholder {
+    color: #222
+}
+::-moz-placeholder {
+    color: #222
+}
+:-ms-input-placeholder {
+    color: #222
+}
+@media only screen and (max-width: 400px) {
+    input {
+        width: 280px;
+        font-size: 28px;
+        line-height: 40px
+    }
+    #wrap {
+        width: 280px;
+        margin-left: -140px
+    }
+    .c {
+        top: 15px;
+        left: 15px
+    }
+    .tweet {
+        bottom: 15px;
+        left: 15px
+    }
+    .logo {
+        bottom: 15px
+    }
+}
