@@ -174,7 +174,7 @@ input:focus {
 :-ms-input-placeholder {
     color: #222
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 460px) {
     input {
         width: 280px;
         font-size: 28px;
@@ -193,6 +193,11 @@ input:focus {
         left: 15px
     }
     .logo {
-        bottom: 15px
+        bottom: 15px;
+        width: 320px;
+        margin-left: -160px
+    }
+    .logo > span {
+        font-size: 12px
     }
 }
