@@ -1,4 +1,8 @@
 /*! url - v1.8.6 - 2013-11-22 */
+if (typeof CoreViewHelpers !== "undefined") {
+    var titleBarHelper = CoreViewHelpers.CoreTitleBarHelper.getForCurrentView();
+    titleBarHelper.extendViewIntoTitleBar = true;
+}
 window.url = function() {
     function e(e) {
         return !isNaN(parseFloat(e)) && isFinite(e)

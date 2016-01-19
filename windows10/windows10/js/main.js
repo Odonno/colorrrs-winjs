@@ -1,6 +1,10 @@
 "use strict";
 
 /*! url - v1.8.6 - 2013-11-22 */
+if (typeof CoreViewHelpers !== "undefined") {
+    var titleBarHelper = CoreViewHelpers.CoreTitleBarHelper.getForCurrentView();
+    titleBarHelper.extendViewIntoTitleBar = true;
+}
 window.url = function () {
     function e(e) {
         return !isNaN(parseFloat(e)) && isFinite(e);
@@ -133,11 +137,6 @@ window.rgbHex = function () {
             var backgroundColor;
             var foregroundColor;
 
-            if (typeof Windows.ApplicationModel.Core.CoreApplication !== 'undefined') {
-                var coreTitleBar = Windows.ApplicationModel.Core.CoreApplication.getCurrentView().titleBar;
-                coreTitleBar.extendViewIntoTitleBar = true;
-            }
-
             // dark theme
             if (r < 125) {
                 // create color
@@ -169,6 +168,7 @@ window.rgbHex = function () {
     };
 })(jQuery);
 $(window).load(function () {
+    $("body").colourBrightness();
     function i() {
         var n, r, i;
         n = window.location.href;
