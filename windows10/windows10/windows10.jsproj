@@ -52,7 +52,11 @@
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>$(VersionNumberMajor).$(VersionNumberMinor)</MinimumVisualStudioVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>windows10_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>windows10_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>D18F20E1354955BDDDDFA164E0CF4022C1037588</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -71,6 +75,8 @@
     <Content Include="index.html" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\main.js" />
+    <None Include="windows10_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
     <None Include="windows10_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
